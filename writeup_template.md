@@ -50,29 +50,14 @@ python drive.py model.h5 run1
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-### Model Architecture and Training Strategy
-
-#### 1. An appropriate model architecture has been employed
-
-My model consists of a convolution neural network with 5x5 filter sizes and depths 6 (model2.py lines 70-80) 
-
-The model includes RELU layers to introduce nonlinearity (code line 73), and the data is normalized in the model using a Keras lambda layer (code line 72). 
-
-#### 2. Model parameter tuning
-
-The model used an adam optimizer, so the learning rate was not tuned manually (model2.py line 81).
-
-#### 3. Appropriate training data
-
-Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road ... 
-
-For details about how I created the training data, see the next section. 
 
 ### Model Architecture and Training Strategy
 
 #### 1. Solution Design Approach
 
-My initial approach was to use lightweight architecture to reduce time that use to train my model 
+My model consists of a convolution neural network with 5x5 filter sizes and depths 6 (model2.py lines 70-80) 
+
+The model includes RELU layers to introduce nonlinearity (code line 73), and the data is normalized in the model using a Keras lambda layer (code line 72) and use fully connected layer (code line 78-80).
 
 A model summary is as follows:
 
