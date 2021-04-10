@@ -73,42 +73,23 @@ For details about how I created the training data, see the next section.
 #### 1. Solution Design Approach
 
 My initial approach was to use lightweight architecture to reduce time that use to train my model 
+
 A model summary is as follows:
 
 ![alt text][image1]
 
-#### 2. Final Model Architecture
+#### 2. Attempts to reduce overfitting in the model
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+I decided not to modify the model by applying regularization techniques like Max pooling. Instead, I decided to keep the training epochs low: only three epochs. In addition to that, I split my sample data into training and validation data. Using 80% as training and 20% as validation. This can be seen at (model2.py line 58).
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+#### 3. Model parameter tuning
 
-![alt text][image1]
+The model used an Adam optimizer, so the learning rate was not tuned manually (model.py line 81).
 
-#### 3. Creation of the Training Set & Training Process
+#### 4. Appropriate training data
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+Training data was chosen to keep the vehicle driving on the road. Also, the data provided by Udacity, I used the first track and second track data. The simulator provides three different images: center, left and right cameras. Each image was used to train the model.
 
-![alt text][image2]
+### The result of model
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
-
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
-
-Then I repeated this process on track two in order to get more data points.
-
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
-
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+the result of model is in [run1.mp4](./run1.mp4)
