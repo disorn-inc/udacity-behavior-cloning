@@ -65,7 +65,7 @@ A model summary is as follows:
 
 #### 2. Attempts to reduce overfitting in the model
 
-I decided not to modify the model by applying regularization techniques like Max pooling. Instead, I decided to keep the training epochs low: only three epochs. In addition to that, I split my sample data into training and validation data. Using 80% as training and 20% as validation. This can be seen at (model2.py line 58).
+I decided not to modify the model by applying regularization techniques like Max pooling. Instead, I decided to keep the training epochs low: only four epochs. In addition to that, I split my sample data into training and validation data. Using 80% as training and 20% as validation. This can be seen at (model2.py line 58).
 
 #### 3. Model parameter tuning
 
